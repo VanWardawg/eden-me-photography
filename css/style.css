@@ -1,0 +1,83 @@
+/**All Pages**/
+.marquee {
+	display:inline-block;
+	z-index:2;
+	color:black;
+	width:70%;
+}
+
+.long {
+	height: 20px;
+	width:15%;
+}
+
+.music-player {
+	border-radius: 4px;
+	width:50px;
+	float:right;
+}
+
+.fixed-bottom-right {
+	background-color: mintcream;
+	border:1px solid gray;
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+
+/**Landing Page**/
+
+.eden-title {
+	height: 40%;
+	display: inline-block;
+	left:35%;
+	top:20%;
+	cursor: pointer;
+	position: absolute;
+}
+
+.top-image {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	z-index: -1;
+}
+
+.bottom-image {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	z-index: -1;
+	position: absolute;
+	top: 0%;
+}
+
+
+/**Gallery**/
+
+.eden-title-gallery {
+	height: 30%;
+	display: inline-block;
+	left:2%;
+	top:1%;
+	cursor: pointer;
+	position: absolute;
+}
+s
+.gallery-background {
+	background-color: mintcream;
+	width:100%;
+	height:100%;
+}
+
+.gallery-nav-bar {
+	position: absolute;
+	top: 18%;
+	left: 25%;
+}
+
+.main-content {
+	position:relative;
+}
+

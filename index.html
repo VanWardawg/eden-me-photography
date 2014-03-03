@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="Photography">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js"/>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/photography.js"></script>
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Eden & Me Photography</title>
+  </head>
+  <body style="background-color:mintcream;">
+    <div ng-view></div>
+    <div ng-controller="MusicCtrl" class="fixed-bottom-right long">
+      <marquee class = "marquee" scrolldelay="200">Now Playing: {{player.song}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Artist: {{player.artist}}</marquee>
+      <div class = "music-player">
+        <i ng-click="player.play()" class="icon-play" ng-show="player.playing==false"></i>
+        <i ng-click="player.pause()" class="icon-pause" ng-show="player.playing==true"></i>
+        <i ng-click="player.previous()" class="icon-backward"></i>
+        <i ng-click="player.next()" class="icon-forward"></i>
+      </div>
+    </div>
+  </body>
+</html>
