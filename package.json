@@ -1,0 +1,29 @@
+{
+  "name": "eden-me-photography",
+  "version": "0.0.0",
+  "description": "Photography website for Taylor Lynn Sarvey Hinton",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VanWardawg/eden-me-photography.git"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "Kevin Hinton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanWardawg/eden-me-photography/issues"
+  },
+  "homepage": "https://github.com/VanWardawg/eden-me-photography",
+  "dependencies": {
+    "express": "~3.4.8",
+    "mongodb": "~1.3.23"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
