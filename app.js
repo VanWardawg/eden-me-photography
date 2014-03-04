@@ -4,6 +4,14 @@ var mongodb = require("mongodb");
 var app = express();
 
 
+// Configuration
+app.use(express.compress());
+app.use(express.urlencoded())
+app.use(express.json())
+app.use(express.static('Public'));
+
+
+
 app.get('/', function(req, res) {
   res.send('Hello World!');
 });
