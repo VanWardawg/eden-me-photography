@@ -1,7 +1,5 @@
-function MainCtrl($scope,$location,$rootScope){
-	$rootScope.landingPage = true;
+function MainCtrl($scope,$location){
 
-	console.log($rootScope.landingPage);
 	$scope.goToGallery = function(){
 
 
@@ -10,14 +8,12 @@ function MainCtrl($scope,$location,$rootScope){
 
 }
 
-function GalleryCtrl($scope,$rootScope){
-	$rootScope.landingPage = false;
+function GalleryCtrl($scope){
 	$scope.selected = 0;
 
 }
 
-function AboutMeCtrl($scope,$rootScope){
-	$rootScope.landingPage = false;
+function AboutMeCtrl($scope){
 	$scope.selected = 0;
 
 }

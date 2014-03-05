@@ -4,14 +4,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js"/>
     <script src="js/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/controller.js"></script>
+    <script src="js/controllers/controller.js"></script>
     <script src="js/photography.js"></script>
-    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
 
     <title>Eden & Me Photography</title>
   </head>
-  <body style="background-color:mintcream;">
+  <body ng-controller="MainCtrl" style="background-color:mintcream;">
+    <nav ng-hide="landingPage" class="navbar navbar-default" role="navigation">
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand" href="#"><img width="50px" height="50px" src = "assets/EdenTitle.png"/></a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="/gallery/family">Wedding</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Portrait</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Family</a></li>
+          </ul>
+        </li>
+        <li><a href="/aboutme">About Me</a></li>
+      </ul>
+    </nav>
     <div ng-view></div>
     <div ng-controller="MusicCtrl" class="fixed-bottom-right long">
       <marquee class = "marquee" scrolldelay="200">Now Playing: {{player.song}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Artist: {{player.artist}}</marquee>
