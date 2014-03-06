@@ -3,6 +3,7 @@ var app = angular.module('Photography', []);
 app.config(function($routeProvider) {
 	$routeProvider
 	  .when('/', {controller:MainCtrl, templateUrl:'html/homePage.html'})
+	  .when('/gallery/families',{controller:GalleryCtrl,templateUrl:'html/families.html'})
 	  .when('/gallery',{controller:GalleryCtrl,templateUrl:'html/gallery.html'})
 	  .when('/aboutme',{controller:AboutMeCtrl,templateUrl:'html/aboutme.html'})
 	  .otherwise({redirectTo:'/'});

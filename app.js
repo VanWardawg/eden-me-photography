@@ -14,6 +14,11 @@ mongodb.Db.connect(mongoUri, function (err, db) {
   });
 });
 
+// Configuration
+app.use(express.compress());
+app.use(express.urlencoded())
+app.use(express.json())
+app.use(express.static('Public'));
 
 // redirect all others to HTML5 history
 app.get('*', function(req, res) {
