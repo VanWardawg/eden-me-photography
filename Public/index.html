@@ -11,23 +11,34 @@
 
     <title>Eden & Me Photography</title>
   </head>
-  <body ng-controller="MainCtrl" style="background-color:mintcream;">
-    <nav ng-hide="landingPage" class="navbar navbar-default" role="navigation">
-      <ul class="nav navbar-nav">
-        <a class="navbar-brand" href="#"><img width="50px" height="50px" src = "assets/EdenTitle.png"/></a>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
-          <ul class="dropdown-menu">
-            <li><a href="/gallery/family">Wedding</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Portrait</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Family</a></li>
-          </ul>
-        </li>
-        <li><a href="/aboutme">About Me</a></li>
-      </ul>
-    </nav>
+  <body style="background-color:mintcream;" >
+    <div ng-controller="NavCtrl" class = "container-fluid"ng-show="location.path() != '/'">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-md-4">
+          <img ng-click = "location.path('/home')" width="250px" height="200px" class = "clickable" src = "assets/EdenTitle.png"/>
+          </div>
+          <div class = "col-md-8 nav-position">
+            <ul class = "nav nav-pills">
+              <li><a href="/home">Home</a></li>
+              <li class = "disabled dropdown" ng-click="toggle_menu()"><a href="" class = "dropdown-special">Gallery <span class="caret"></span></a>
+                <ul ng-show="dropdown" ng-class="{show:dropdown}" class="dropdown-menu">
+                  <li><a href="/gallery/families">Family</a></li>
+                  <li><a href="/gallery/wedding">Wedding</a></li>
+                  <li><a href="/gallery/newborn">Newborn</a></li>
+                  <li><a href="/gallery/portraits">Portraits</a></li>
+                </ul>
+              </li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/aboutme">About Me</a></li>
+            </ul>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          
+        </div>
+      </div>
+    </div>
     <div ng-view></div>
     <div ng-controller="MusicCtrl" class="fixed-bottom-right long">
       <marquee class = "marquee" scrolldelay="200">Now Playing: {{player.song}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Artist: {{player.artist}}</marquee>

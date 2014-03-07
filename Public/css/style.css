@@ -25,6 +25,10 @@
 	bottom:5px;
 }
 
+.clickable {
+	cursor:pointer !important;
+}
+
 /**Landing Page**/
 
 .eden-title {
@@ -51,6 +55,25 @@
 	z-index: -1;
 	position: absolute;
 	top: 0%;
+}
+
+
+/**header**/
+.nav-position a{
+	color: #999 !important;
+}
+.nav-position {
+	height: 200px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.dropdown-special {
+	cursor:pointer !important;
+}
+
+.show {
+	display:visible !important;
 }
 
 

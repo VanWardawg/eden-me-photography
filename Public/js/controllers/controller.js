@@ -22,5 +22,14 @@ function MusicCtrl($scope,player){
 	$scope.player = player;
 	var songs = $scope.player.songs();
 	var song = Math.floor((Math.random()*songs)+1);
-	$scope.player.playSong(song);
+	//$scope.player.playSong(song);
+}
+
+function NavCtrl($scope){
+
+	$scope.dropdown = false;
+	$scope.toggle_menu = function() {
+		$scope.dropdown = !$scope.dropdown;
+		var me = $scope;
+	}
 }

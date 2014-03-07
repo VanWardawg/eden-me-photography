@@ -1,13 +1,22 @@
 var app = angular.module('Photography', []);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider,$locationProvider) {
 	$routeProvider
 	  .when('/', {controller:MainCtrl, templateUrl:'html/homePage.html'})
 	  .when('/gallery/families',{controller:GalleryCtrl,templateUrl:'html/families.html'})
+	  .when('/gallery/wedding',{controller:GalleryCtrl,templateUrl:'../html/wedding.html'})
+	  .when('/gallery/newborn',{controller:GalleryCtrl,templateUrl:'../html/newborn.html'})
+	  .when('/gallery/portraits',{controller:GalleryCtrl,templateUrl:'../html/portrait.html'})
 	  .when('/gallery',{controller:GalleryCtrl,templateUrl:'html/gallery.html'})
 	  .when('/aboutme',{controller:AboutMeCtrl,templateUrl:'html/aboutme.html'})
+	  .when('/pricing',{controller:AboutMeCtrl,templateUrl:'html/pricing.html'})
+	  .when('/contact',{controller:AboutMeCtrl,templateUrl:'html/contact.html'})
 	  .otherwise({redirectTo:'/'});
-});
+
+   		$locationProvider.html5Mode(true);
+}).run(['$rootScope','$location',function($root,$loc){
+	$root.location = $loc;
+}]);;
 
 app.factory('player', function(audio, $rootScope) {
 	var player,
